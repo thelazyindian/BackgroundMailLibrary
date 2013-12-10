@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.kristijandraca.backgroundmaillibrary.mail.GmailSender;
 
 /**
- * @author Kristijan Draèa https://plus.google.com/u/0/+KristijanDraèa
+ * @author Kristijan DraÄa https://plus.google.com/u/0/+KristijanDraÄa
  */
 public class BackgroundMail {
 	String TAG = "Contact Form Library";
