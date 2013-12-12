@@ -15,6 +15,16 @@ public final class R {
     }
     public static final class string {
         public static int app_name=0x7f030000;
+        /**  messagess 
+         */
+        public static int loading=0x7f030005;
+        public static int message_send=0x7f030006;
+        public static int no_email_recipient=0x7f030003;
+        public static int no_gmail_password=0x7f030002;
+        /**  errors 
+         */
+        public static int no_gmail_username=0x7f030001;
+        public static int no_internet=0x7f030004;
     }
     public static final class style {
         /** 
