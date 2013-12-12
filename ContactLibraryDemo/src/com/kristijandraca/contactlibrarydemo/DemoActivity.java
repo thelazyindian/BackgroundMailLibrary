@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import com.kristijandraca.contactlibrarydemo.R;
+import android.widget.EditText;
+
+import com.kristijandraca.backgroundmaillibrary.BackgroundMail;
 
 public class DemoActivity extends Activity {
 	Context context;
+	EditText to, subject, message;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,21 +21,27 @@ public class DemoActivity extends Activity {
 
 		context = this;
 
-		Button bt_contact = (Button) findViewById(R.id.bt_contact);
-		bt_contact.setOnClickListener(new OnClickListener() {
+		to = (EditText) findViewById(R.id.et_to);
+		subject = (EditText) findViewById(R.id.et_subject);
+		message = (EditText) findViewById(R.id.et_message);
+
+		Button bt_send = (Button) findViewById(R.id.bt_send);
+		bt_send.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				/*
-				 * BackgroundMail bm = new BackgroundMail(context);
-				 * bm.setGmailUserName("gusti.app@gmail.com");
-				 * bm.setGmailPassword("Ss<#K64~$.xA]4t");
-				 * bm.setMailTo("kristijandraca@gmail.com");
-				 * bm.setFormSubject("Subject"); bm.setFormBody("Body");
-				 * bm.setSendingMessage("Uèitavanje...");
-				 * bm.setSendingMessageSuccess("Poruka je uspješno poslana.");
-				 * bm.send();
-				 */
+
+				BackgroundMail bm = new BackgroundMail(context);
+				bm.setGmailUserName("your@gmail.com");
+				bm.setGmailPassword("password");
+				bm.setMailTo(to.getText().toString());
+				bm.setFormSubject(subject.getText().toString());
+				bm.setFormBody(message.getText().toString());
+				// this is optional
+				// bm.setSendingMessage("Uèitavanje...");
+				// bm.setSendingMessageSuccess("Poruka je uspješno poslana.");
+				bm.send();
+
 			}
 
 		});

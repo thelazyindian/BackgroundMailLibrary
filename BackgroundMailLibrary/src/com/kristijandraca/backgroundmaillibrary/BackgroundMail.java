@@ -47,6 +47,7 @@ public class BackgroundMail {
 
 	public void setSendingMessageSuccess(String string) {
 		this.sendingMessageSuccess = string;
+
 	}
 
 	public void send() {
@@ -78,11 +79,11 @@ public class BackgroundMail {
 		@Override
 		protected void onPreExecute() {
 			pd = new ProgressDialog(mContext);
-			if (sendingMessage == null && sendingMessage.isEmpty()) {
+			if (sendingMessage != null && !sendingMessage.isEmpty()) {
+				pd.setMessage(sendingMessage);
+			} else {
 				Log.d(TAG, "We dont have sending message so we use generic");
 				pd.setMessage("Loading...");
-			} else {
-				pd.setMessage(sendingMessage);
 			}
 			pd.setCancelable(false);
 			pd.show();
@@ -104,14 +105,14 @@ public class BackgroundMail {
 		@Override
 		protected void onPostExecute(String result) {
 			pd.dismiss();
-			if (sendingMessageSuccess == null
-					&& sendingMessageSuccess.isEmpty()) {
+			if (sendingMessageSuccess != null
+					&& !sendingMessageSuccess.isEmpty()) {
+				Toast.makeText(mContext, sendingMessageSuccess,
+						Toast.LENGTH_SHORT).show();
+			} else {
 				Log.d(TAG,
 						"We dont have sending success message so we use generic");
 				Toast.makeText(mContext, "Your message was sent successfully.",
-						Toast.LENGTH_SHORT).show();
-			} else {
-				Toast.makeText(mContext, sendingMessageSuccess,
 						Toast.LENGTH_SHORT).show();
 			}
 			super.onPostExecute(result);

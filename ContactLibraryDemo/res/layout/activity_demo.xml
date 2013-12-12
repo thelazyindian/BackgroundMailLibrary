@@ -8,12 +8,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DemoActivity" >
 
-    <Button
-        android:id="@+id/bt_contact"
+    <EditText
+        android:id="@+id/et_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Contact Demo" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/to"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/et_to"
+        android:layout_below="@+id/et_to"
+        android:hint="@string/subject"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_send"
+        android:layout_alignLeft="@+id/et_subject"
+        android:layout_alignRight="@+id/et_subject"
+        android:layout_below="@+id/et_subject"
+        android:ems="10"
+        android:hint="@string/message"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/et_message"
+        android:text="@string/send" />
 
 </RelativeLayout>

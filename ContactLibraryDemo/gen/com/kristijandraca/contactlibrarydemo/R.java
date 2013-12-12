@@ -24,22 +24,20 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080001;
-        public static final int bt_contact=0x7f080000;
+        public static final int bt_send=0x7f070003;
+        public static final int et_message=0x7f070002;
+        public static final int et_subject=0x7f070001;
+        public static final int et_to=0x7f070000;
     }
     public static final class layout {
         public static final int activity_demo=0x7f030000;
     }
-    public static final class menu {
-        public static final int demo=0x7f070000;
-    }
     public static final class string {
-        public static final int action_settings=0x7f040007;
         public static final int app_name=0x7f040000;
-        public static final int hello_world=0x7f040008;
         /**  messagess 
          */
         public static final int loading=0x7f040005;
+        public static final int message=0x7f040009;
         public static final int message_send=0x7f040006;
         public static final int no_email_recipient=0x7f040003;
         public static final int no_gmail_password=0x7f040002;
@@ -47,6 +45,9 @@ public final class R {
          */
         public static final int no_gmail_username=0x7f040001;
         public static final int no_internet=0x7f040004;
+        public static final int send=0x7f04000a;
+        public static final int subject=0x7f040008;
+        public static final int to=0x7f040007;
     }
     public static final class style {
         /** 
