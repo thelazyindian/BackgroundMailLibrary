@@ -18,7 +18,7 @@ Android Library for sending mail in background
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             
-**Custom messagess**
+**This is optional**
 
             bm.setSendingMessage("Loading...");
             bm.setSendingMessageSuccess("Your message was sent successfully.");
