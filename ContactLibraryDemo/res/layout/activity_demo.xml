@@ -29,8 +29,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/et_to"
         android:layout_below="@+id/et_to"
-        android:hint="@string/subject"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="@string/subject" />
 
     <EditText
         android:id="@+id/et_message"
@@ -41,6 +41,7 @@
         android:layout_alignRight="@+id/et_subject"
         android:layout_below="@+id/et_subject"
         android:ems="10"
+        android:gravity="top"
         android:hint="@string/message"
         android:inputType="textMultiLine" />
 
