@@ -3,7 +3,7 @@ Background Mail Library 1.2
 
 Android Library for sending mail in background
 
-How to use it
+**How to use it**
 
             BackgroundMail bm = new BackgroundMail(context);
             bm.setGmailUserName("yourgmail@gmail.com");
@@ -13,25 +13,33 @@ How to use it
             bm.setFormBody("Body");
             bm.send();
             
-Permissions
+**Permissions**
 
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             
-Custom messagess
+**Custom messagess**
 
             bm.setSendingMessage("Loading...");
             bm.setSendingMessageSuccess("Your message was sent successfully.");
             bm.setProcessVisibility(false);
             
-Changelog
+**Changelog**
 
-            *version 1.2*
+            - version 1.2
             Added process visibility feature
-            
-            *version 1.1*
+            - version 1.1
             Added demo
             Bug fix
-            
-            *version 1.0*
+            - version 1.0
             First commit
+            
+**Credits**
+
+            Kristijan Drača     
+            
+**License**
+
+[Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+
