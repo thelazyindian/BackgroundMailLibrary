@@ -40,6 +40,7 @@ public class DemoActivity extends Activity {
 				// this is optional
 				// bm.setSendingMessage("Uèitavanje...");
 				// bm.setSendingMessageSuccess("Poruka je uspješno poslana.");
+				// bm.setProcessVisibility(false);
 				bm.send();
 
 			}

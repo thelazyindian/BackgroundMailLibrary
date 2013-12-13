@@ -15,6 +15,7 @@ public class BackgroundMail {
 	String TAG = "Contact Form Library";
 	String username, password, mailto, subject, body, sendingMessage,
 			sendingMessageSuccess;
+	boolean processVisibility = true;
 	Context mContext;
 
 	public BackgroundMail(Context context) {
@@ -27,6 +28,10 @@ public class BackgroundMail {
 
 	public void setGmailPassword(String string) {
 		this.password = string;
+	}
+
+	public void setProcessVisibility(boolean state) {
+		this.processVisibility = state;
 	}
 
 	public void setMailTo(String string) {
@@ -78,15 +83,17 @@ public class BackgroundMail {
 
 		@Override
 		protected void onPreExecute() {
-			pd = new ProgressDialog(mContext);
-			if (sendingMessage != null && !sendingMessage.isEmpty()) {
-				pd.setMessage(sendingMessage);
-			} else {
-				Log.d(TAG, "We dont have sending message so we use generic");
-				pd.setMessage("Loading...");
+			if (processVisibility != false) {
+				pd = new ProgressDialog(mContext);
+				if (sendingMessage != null && !sendingMessage.isEmpty()) {
+					pd.setMessage(sendingMessage);
+				} else {
+					Log.d(TAG, "We dont have sending message so we use generic");
+					pd.setMessage("Loading...");
+				}
+				pd.setCancelable(false);
+				pd.show();
 			}
-			pd.setCancelable(false);
-			pd.show();
 			super.onPreExecute();
 		}
 
@@ -104,16 +111,19 @@ public class BackgroundMail {
 
 		@Override
 		protected void onPostExecute(String result) {
-			pd.dismiss();
-			if (sendingMessageSuccess != null
-					&& !sendingMessageSuccess.isEmpty()) {
-				Toast.makeText(mContext, sendingMessageSuccess,
-						Toast.LENGTH_SHORT).show();
-			} else {
-				Log.d(TAG,
-						"We dont have sending success message so we use generic");
-				Toast.makeText(mContext, "Your message was sent successfully.",
-						Toast.LENGTH_SHORT).show();
+			if (processVisibility != false) {
+				pd.dismiss();
+				if (sendingMessageSuccess != null
+						&& !sendingMessageSuccess.isEmpty()) {
+					Toast.makeText(mContext, sendingMessageSuccess,
+							Toast.LENGTH_SHORT).show();
+				} else {
+					Log.d(TAG,
+							"We dont have sending success message so we use generic");
+					Toast.makeText(mContext,
+							"Your message was sent successfully.",
+							Toast.LENGTH_SHORT).show();
+				}
 			}
 			super.onPostExecute(result);
 		}
