@@ -3,12 +3,14 @@ package com.kristijandraca.contactlibrarydemo;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.kristijandraca.backgroundmaillibrary.BackgroundMail;
+import com.kristijandraca.backgroundmaillibrary.Utils;
 
 public class DemoActivity extends Activity {
 	Context context;
@@ -24,7 +26,10 @@ public class DemoActivity extends Activity {
 		to = (EditText) findViewById(R.id.et_to);
 		subject = (EditText) findViewById(R.id.et_subject);
 		message = (EditText) findViewById(R.id.et_message);
-
+		
+		//DELETE THIS LINE AFTER YOU FIND YOUR ENCRPYTED PASSWORD
+        Log.d("password", Utils.encryptIt("password"));
+        
 		Button bt_send = (Button) findViewById(R.id.bt_send);
 		bt_send.setOnClickListener(new OnClickListener() {
 
@@ -33,7 +38,8 @@ public class DemoActivity extends Activity {
 
 				BackgroundMail bm = new BackgroundMail(context);
 				bm.setGmailUserName("your@gmail.com");
-				bm.setGmailPassword("password");
+                //"DoE/GTiYpX5sz5zmTFuoHg==" is crypted "password"
+				bm.setGmailPassword(Utils.decryptIt("DoE/GTiYpX5sz5zmTFuoHg==")); 
 				bm.setMailTo(to.getText().toString());
 				bm.setFormSubject(subject.getText().toString());
 				bm.setFormBody(message.getText().toString());
