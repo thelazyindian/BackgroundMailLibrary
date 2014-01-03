@@ -25,6 +25,7 @@ Android Library for sending mail in background
             bm.setProcessVisibility(false);
             
 **Changelog**
+
             - version 1.3
             Added password encryption for better security
             - version 1.2
@@ -34,7 +35,7 @@ Android Library for sending mail in background
             Bug fix
             - version 1.0
             First commit
-            
+
 **Credits**
 
             Kristijan Drača     
