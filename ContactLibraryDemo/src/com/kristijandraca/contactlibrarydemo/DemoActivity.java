@@ -44,8 +44,8 @@ public class DemoActivity extends Activity {
 				bm.setFormSubject(subject.getText().toString());
 				bm.setFormBody(message.getText().toString());
 				// this is optional
-				// bm.setSendingMessage("Uèitavanje...");
-				// bm.setSendingMessageSuccess("Poruka je uspješno poslana.");
+				// bm.setSendingMessage("Loading...);
+				// bm.setSendingMessageSuccess("Your message was sent successfully.");
 				// bm.setProcessVisibility(false);
 				bm.send();
 
