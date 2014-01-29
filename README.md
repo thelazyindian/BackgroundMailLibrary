@@ -38,7 +38,7 @@ Android Library for sending mail in background
 
 **Credits**
 
-            Kristijan Drača     
+            © 2013-2014 Kristijan Drača     
             
 **License**
 
