@@ -1,8 +1,11 @@
 package com.kristijandraca.contactlibrarydemo;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,7 +31,7 @@ public class DemoActivity extends Activity {
 		message = (EditText) findViewById(R.id.et_message);
 		
 		//DELETE THIS LINE AFTER YOU FIND YOUR ENCRPYTED PASSWORD
-        Log.d("password", Utils.encryptIt("password"));
+		Log.d("password", Utils.encryptIt("password"));
         
 		Button bt_send = (Button) findViewById(R.id.bt_send);
 		bt_send.setOnClickListener(new OnClickListener() {
@@ -43,10 +46,13 @@ public class DemoActivity extends Activity {
 				bm.setMailTo(to.getText().toString());
 				bm.setFormSubject(subject.getText().toString());
 				bm.setFormBody(message.getText().toString());
+				
 				// this is optional
+				//
 				// bm.setSendingMessage("Loading...);
 				// bm.setSendingMessageSuccess("Your message was sent successfully.");
 				// bm.setProcessVisibility(false);
+				// bm.setAttachment(Environment.getExternalStorageDirectory().getPath()+File.pathSeparator+"somefile.txt");
 				bm.send();
 
 			}
