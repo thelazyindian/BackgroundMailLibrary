@@ -1,21 +1,24 @@
 package com.kristijandraca.backgroundmaillibrary;
 
+import java.util.ArrayList;
+
+import com.kristijandraca.backgroundmaillibrary.mail.GmailSender;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.kristijandraca.backgroundmaillibrary.mail.GmailSender;
-
 /**
  * @author Kristijan Draèa https://plus.google.com/u/0/+KristijanDraèa
  */
 public class BackgroundMail {
-	String TAG = "Contact Form Library";
+	String TAG = "Bacground Mail Library";
 	String username, password, mailto, subject, body, sendingMessage,
 			sendingMessageSuccess;
 	boolean processVisibility = true;
+	ArrayList<String> attachments = new ArrayList<String>();
 	Context mContext;
 
 	public BackgroundMail(Context context) {
@@ -52,6 +55,11 @@ public class BackgroundMail {
 
 	public void setSendingMessageSuccess(String string) {
 		this.sendingMessageSuccess = string;
+
+	}
+	
+	public void setAttachment(String attachments) {
+		this.attachments.add(attachments);
 
 	}
 
@@ -101,11 +109,17 @@ public class BackgroundMail {
 		protected String doInBackground(String... arg0) {
 			try {
 				GmailSender sender = new GmailSender(username, password);
+				if(!attachments.isEmpty()){
+					for (int i = 0; i < attachments.size(); i++) {
+							if(!attachments.get(i).isEmpty()){
+								sender.addAttachment(attachments.get(i));
+							}
+					}
+				}
 				sender.sendMail(subject, body, username, mailto);
 			} catch (Exception e) {
 				Log.e(TAG, e.getMessage().toString());
 			}
-
 			return null;
 		}
 
