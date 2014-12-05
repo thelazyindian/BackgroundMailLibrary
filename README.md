@@ -1,4 +1,4 @@
-Background Mail Library 1.4
+Background Mail Library 1.5
 =====================
 
 Android Library for sending mail in background
@@ -28,6 +28,8 @@ Android Library for sending mail in background
             
 **Changelog**
 			
+			-version 1.5
+			fix #4
 			- version 1.4
 			Added attachments support
             - version 1.3
