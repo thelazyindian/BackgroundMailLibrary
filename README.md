@@ -17,14 +17,14 @@ Android Library for sending mail in background
 
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
-			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
             
 **This is optional**
 
             bm.setSendingMessage("Loading...");
             bm.setSendingMessageSuccess("Your message was sent successfully.");
             bm.setProcessVisibility(false);
-			bm.setAttachment(Environment.getExternalStorageDirectory().getPath()+File.pathSeparator+"somefile.txt");
+            bm.setAttachment(Environment.getExternalStorageDirectory().getPath()+File.pathSeparator+"somefile.txt");
             
 **Changelog**
 			
