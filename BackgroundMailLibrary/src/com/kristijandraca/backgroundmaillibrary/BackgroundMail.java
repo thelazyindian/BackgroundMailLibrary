@@ -119,7 +119,9 @@ public class BackgroundMail {
 				}
 				sender.sendMail(subject, body, username, mailto);
 			} catch (Exception e) {
-				Log.e(TAG, e.getMessage().toString());
+				e.printStackTrace();
+				if(e.getMessage() != null)
+					Log.e(TAG, e.getMessage().toString());
 			}
 			return null;
 		}
