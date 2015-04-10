@@ -16,6 +16,7 @@ before_install:
     - android update sdk --filter platform-tools,android-16,extra-android-support,android-21 --no-ui --force
 
     # Create and start emulator
+    - android list target
     - android create avd --force -n test -t android-21 --abi armeabi
     - emulator -avd test -no-skin -no-audio -no-window &
 
