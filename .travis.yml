@@ -2,7 +2,7 @@ language: java
 jdk: oraclejdk7
 env:
     matrix:
-    - ANDROID_SDKS=android-10           ANDROID_TARGET=android-10  ANDROID_ABI=armeabi
+    - ANDROID_SDKS=android-21           ANDROID_TARGET=android-21  ANDROID_ABI=armeabi
 before_install:
     # Install base Android SDK
     - sudo apt-get update -qq
@@ -13,10 +13,10 @@ before_install:
     - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
     # Install required Android components.
-    - android update sdk --filter platform-tools,android-16,extra-android-support,android-10 --no-ui --force
+    - android update sdk --filter platform-tools,android-16,extra-android-support,android-21 --no-ui --force
 
     # Create and start emulator
-    - echo no | android create avd --force -n test -t android-10 --abi armeabi
+    - echo no | android create avd --force -n test -t android-21 --abi armeabi
     - emulator -avd test -no-skin -no-audio -no-window &
 
 before_script:
