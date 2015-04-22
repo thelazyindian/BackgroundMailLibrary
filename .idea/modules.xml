@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BackgroundMail.iml" filepath="$PROJECT_DIR$/BackgroundMail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BackgroundMailLibrary.iml" filepath="$PROJECT_DIR$/BackgroundMailLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/backgroundmaillibrary/backgroundmaillibrary.iml" filepath="$PROJECT_DIR$/backgroundmaillibrary/backgroundmaillibrary.iml" />
     </modules>

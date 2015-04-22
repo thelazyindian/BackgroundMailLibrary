@@ -1,4 +1,4 @@
-Background Mail Library 1.5
+Background Mail Library 1.6
 =====================
 
 Android Library for sending mail in background
@@ -27,7 +27,8 @@ Android Library for sending mail in background
             bm.setAttachment(Environment.getExternalStorageDirectory().getPath()+File.pathSeparator+"somefile.txt");
             
 **Changelog**
-			
+			-version 1.6
+			Added Android Studio project
 			-version 1.5
 			fix #4
 			- version 1.4
@@ -44,11 +45,11 @@ Android Library for sending mail in background
 
 **Credits**
 
-            © 2013-2014 Kristijan Drača     
+            © 2013-2015 Kristijan Drača     
             
 **License**
 
-			Copyright 2014 Kristijan Drača
+			Copyright 2015 Kristijan Drača
 
 			Licensed under the Apache License, Version 2.0 (the "License");
 			you may not use this file except in compliance with the License.
