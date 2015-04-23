@@ -1,1 +1,1 @@
-include ':app', ':backgroundmaillibrary'
+include ':app', ':BackgroundMailLibrary'

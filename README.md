@@ -1,4 +1,4 @@
-Background Mail Library 1.6
+Background Mail Library 1.7
 =====================
 
 Android Library for sending mail in background
