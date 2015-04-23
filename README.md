@@ -1,6 +1,6 @@
 Background Mail Library 1.7
 =====================
-
+[ ![Download](https://api.bintray.com/packages/kristijandraca/maven/BackgroundMailLibrary/images/download.svg) ](https://bintray.com/kristijandraca/maven/BackgroundMailLibrary/_latestVersion)   
 Android Library for sending mail in background
 
 **How to use it**
