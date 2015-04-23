@@ -27,12 +27,13 @@ Android Library for sending mail in background
             bm.setAttachment(Environment.getExternalStorageDirectory().getPath()+File.pathSeparator+"somefile.txt");
             
 **Changelog**
-			-version 1.6
-			Added Android Studio project
-			-version 1.5
-			fix #4
-			- version 1.4
-			Added attachments support
+
+            -version 1.6
+            Added Android Studio project
+            -version 1.5
+            fix #4
+            - version 1.4
+            Added attachments support
             - version 1.3
             Added password encryption for better security
             - version 1.2
