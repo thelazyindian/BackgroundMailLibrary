@@ -5,7 +5,7 @@ apply plugin: 'com.jfrog.bintray'
 def siteUrl = 'https://github.com/kristijandraca/BackgroundMailLibrary'
 def gitUrl = 'https://github.com/kristijandraca/BackgroundMailLibrary.git'
 
-version = "1.7"
+version = "1.8"
 group = "com.kristijandraca"
 
 android {
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 22
-        versionCode 7
+        versionCode 8
         versionName version
     }
     buildTypes {
@@ -58,7 +58,9 @@ install {
                 // Add your description here
                 name 'Android Library for sending mail in background'
                 url siteUrl
-
+                groupId 'com.kristijandraca.backgroundmaillibrary'
+                artifactId 'background-mail-library'
+                version '1.8'
                 // Set your license
                 licenses {
                     license {
@@ -69,7 +71,7 @@ install {
                 developers {
                     developer {
                         id 'kristijandraca'
-                        name 'Kristijan Draèa'
+                        name 'Kristijan Draca'
                         email 'kristijandraca@gmail.com'
                     }
                 }
@@ -79,7 +81,7 @@ install {
                     url siteUrl
 
                 }
-            }
+            }.writeTo("pom.xml")
         }
     }
 }
