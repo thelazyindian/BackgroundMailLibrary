@@ -9,6 +9,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author kristijandraca@gmail.com
@@ -65,6 +67,16 @@ public class BackgroundMail {
 	public void setAttachment(String attachments) {
 		this.attachments.add(attachments);
 
+	}
+	
+	public void setAttachments(List<String> attachments) {
+		this.attachments.addAll(attachments);
+		
+	}
+ 
+	public void setAttachments(String...attachments) {
+		this.attachments.addAll(Arrays.asList(attachments));
+		
 	}
 
 	public void send() {
